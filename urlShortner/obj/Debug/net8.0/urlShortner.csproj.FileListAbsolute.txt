@@ -181,3 +181,4 @@ C:/Users/Mina Doss/OneDrive/Desktop/API/API/urlShortner/obj/Debug/net8.0/ref/url
 /Users/FoFa/CAP/API/urlShortner/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/FoFa/CAP/API/urlShortner/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/FoFa/CAP/API/urlShortner/obj/Debug/net8.0/urlShort.A55E3C90.Up2Date
+/Users/FoFa/CAP/API/urlShortner/obj/Debug/net8.0/urlShortner.sourcelink.json
