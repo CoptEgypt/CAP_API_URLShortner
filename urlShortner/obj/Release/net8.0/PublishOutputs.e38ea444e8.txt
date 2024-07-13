@@ -1,0 +1,7 @@
+/Users/FoFa/CAP/API/urlShortner/bin/publish/urlShortner
+/Users/FoFa/CAP/API/urlShortner/bin/publish/appsettings.Development.json
+/Users/FoFa/CAP/API/urlShortner/bin/publish/appsettings.json
+/Users/FoFa/CAP/API/urlShortner/bin/publish/urlShortner.dll
+/Users/FoFa/CAP/API/urlShortner/bin/publish/urlShortner.deps.json
+/Users/FoFa/CAP/API/urlShortner/bin/publish/urlShortner.runtimeconfig.json
+/Users/FoFa/CAP/API/urlShortner/bin/publish/urlShortner.pdb
