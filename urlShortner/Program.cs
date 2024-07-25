@@ -17,8 +17,10 @@
 // app.Run();
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using UrlShortner.Helper;
+using UrlShortner.Models;
 using UrlShortner.Security;
 
 namespace UrlShortner;
@@ -27,9 +29,17 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        // foreach (var user in DataMock.Users)
+        // {
+        //     user.HashedPass = BasicAuthenticationHandler.HashPassword(user.Password, user.PasswordSalt);
+        //     //print out all users information
+        // Console.WriteLine($"new User {{ FirstName = \"{user.FirstName}\", LastName = \"{user.LastName}\", Email = \"{user.Email}\", Password = \"{user.Password}\", PasswordSalt = \"{user.PasswordSalt}\", HashedPass = \"{user.HashedPass}\", Roles = [ {string.Join(", ", user.Roles.Select(role => $"\"{role}\""))} ] }}");
+        // }
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllers();
+        builder.Services.AddDbContext<UrlShortenerContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
         // SM: This is the authentication part where C# handles what comes
         // from the API header "Authorization"

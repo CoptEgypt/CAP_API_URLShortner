@@ -11,11 +11,3 @@ using System.ComponentModel.DataAnnotations;
         [StringLength(50)]
         public string ShortenedUrl { get; set; }
     }
-    //     public class UrlShortenerContext : DbContext
-    // {
-    //     public UrlShortenerContext(DbContextOptions<UrlShortenerContext> options) : base(options)
-    //     {
-    //     }
-    //     public DbSet<Url> Urls { get; set; }
-    //     public DbSet<Url> Urls { get; set; }
-    // }

@@ -35,7 +35,7 @@ namespace UrlShortner.Security
                 
                 var hashedPassword = HashPassword(enteredPassword, salt);
 
-                if (hashedPassword == user.Password)
+                if (hashedPassword == user.HashedPass)
                 {
                     var claims = new[] { new Claim("emails", email) };
                     var identity = new ClaimsIdentity(claims, Scheme.Name);
@@ -53,7 +53,7 @@ namespace UrlShortner.Security
                 return AuthenticateResult.Fail("Invalid Authorization Header");
             }
         }
-        private string HashPassword(string password, string salt)
+        public static string HashPassword(string password, string salt)
         {
             using var sha512 = new SHA512Managed();
             var saltedPassword = Encoding.UTF8.GetBytes(password + salt).ToArray();
